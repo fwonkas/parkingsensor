@@ -78,7 +78,7 @@ void loop()
     sameTime = 0;
   } else {
     sameTime += 100;
-    if (sameTime > stayOn) {
+    if (sameTime >= stayOn) {
       lightLevel = 0;
     }
   }
