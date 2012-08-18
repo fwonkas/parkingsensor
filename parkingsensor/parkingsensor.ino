@@ -14,14 +14,14 @@
   * SIG connection attached to digital pin 7
 
    Bicolor LED
-  * Positive lead attached to pin 7
-  * Ground lead attached to pin 10, with a 220-ohm resistor
+  * Positive lead attached to pin 8
+  * Ground lead attached to pin 9, with a 220-ohm resistor
 
  */
 
 const int pingPin = 7;
-const int greenPin = 9;
-const int redPin = 10;
+const int greenPin = 8;
+const int redPin = 9;
 long sameTime = 0;
 long stayOn = 10000;
 long lastDistance = 0;
