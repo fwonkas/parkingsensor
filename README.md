@@ -10,7 +10,7 @@ Ping))) Sensor:
 Bicolor LED
 
   * +V lead attached to pin 8
-  * GND lead attached to pin 9, with a 220-ohm resistor
+  * GND lead attached to pin 9
 
 Linear 100K Potentiometer
 

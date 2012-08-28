@@ -8,19 +8,6 @@
 
   Derived from: http://www.arduino.cc/en/Tutorial/Ping
 
-  Ping))) Sensor:
-    * +V connection attached to +5V
-    * GND connection attached to ground
-    * SIG connection attached to digital pin 7
-
-  Bicolor LED
-    * Positive lead attached to pin 8
-    * Ground lead attached to pin 9, with a 220-ohm resistor
-
-  Linear 100K Potentiometer
-    * Ground lead attached to ground
-    * Signal lead attached to A0
-    * +V lead attached to +3.3V
  */
 
 const int pingPin = 7;
