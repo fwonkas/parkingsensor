@@ -1,5 +1,7 @@
 # Parking Sensor
-Simple parking sensor using an Arduino and a Parallax Ping))) sensor.
+Simple parking sensor using an Arduino and a Parallax Ping))) sensor.  100K
+linear potentiometer is used to set the distance at which the light turns from
+green to red. It ranges from 12 to 72 inches.
 
 Ping))) Sensor:
 
