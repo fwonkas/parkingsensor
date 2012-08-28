@@ -8,15 +8,19 @@
 
   Derived from: http://www.arduino.cc/en/Tutorial/Ping
 
-   Ping))) Sensor:
-  * +V connection attached to +5V
-  * GND connection attached to ground
-  * SIG connection attached to digital pin 7
+  Ping))) Sensor:
+    * +V connection attached to +5V
+    * GND connection attached to ground
+    * SIG connection attached to digital pin 7
 
-   Bicolor LED
-  * Positive lead attached to pin 8
-  * Ground lead attached to pin 9, with a 220-ohm resistor
+  Bicolor LED
+    * Positive lead attached to pin 8
+    * Ground lead attached to pin 9, with a 220-ohm resistor
 
+  Linear 100K Potentiometer
+    * Ground lead attached to ground
+    * Signal lead attached to A0
+    * +V lead attached to +3.3V
  */
 
 const int pingPin = 7;
@@ -25,8 +29,9 @@ const int redPin = 9;
 long sameTime = 0;
 long stayOn = 10000;
 long lastDistance = 0;
-int stopDistance = 36;
 int danger = 12;
+const int distancePin = A0;
+unsigned int stopDistance;
 
 void setup() {
   Serial.begin(9600);
@@ -38,6 +43,9 @@ void loop()
   int LED, GND;
   int lightLevel = 255;
   boolean closeEnough, tooClose;
+
+  stopDistance = constrain(analogRead(distancePin), 0, 685);
+  stopDistance = map(stopDistance, 0, 685, 12, 72);
 
   // The PING))) is triggered by a HIGH pulse of 2 or more microseconds.
   // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
