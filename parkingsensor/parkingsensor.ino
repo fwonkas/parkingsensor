@@ -16,7 +16,7 @@ const int redPin = 9;
 long sameTime = 0;
 long stayOn = 10000;
 long lastDistance = 0;
-int danger = 12;
+int danger = 9;
 const int distancePin = A0;
 unsigned int stopDistance;
 
