@@ -29,9 +29,10 @@ void loop() {
   int LED, GND;
   unsigned int lightLevel = 255;
   boolean closeEnough, tooClose;
+  unsigned int distancePot;
 
-  stopDistance = constrain(analogRead(distancePin), 0, 685);
-  stopDistance = map(stopDistance, 0, 685, 12, 72);
+  distancePot = constrain(analogRead(distancePin), 0, 685);
+  stopDistance = map(distancePot, 0, 685, 12, 72);
 
   // The PING))) is triggered by a HIGH pulse of 2 or more microseconds.
   // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
