@@ -14,9 +14,9 @@ const int pingPin = 7;
 const int greenPin = 8;
 const int redPin = 9;
 long sameTime = 0;
-long stayOn = 10000;
+const long stayOn = 10000;
 long lastDistance = 0;
-int danger = 9;
+const unsigned int danger = 9;
 const int distancePin = A0;
 unsigned int stopDistance;
 
