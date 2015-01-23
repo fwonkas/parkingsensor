@@ -24,11 +24,10 @@ void setup() {
   Serial.begin(9600);
 }
 
-void loop()
-{
-  long duration, inches;
+void loop() {
+  unsigned long duration, inches;
   int LED, GND;
-  int lightLevel = 255;
+  unsigned int lightLevel = 255;
   boolean closeEnough, tooClose;
 
   stopDistance = constrain(analogRead(distancePin), 0, 685);
