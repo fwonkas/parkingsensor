@@ -70,12 +70,9 @@ void loop() {
 
   if (lastDistance != inches) {
     // reset timer
-    sameTime = 0;
-  } else {
-    sameTime += 100;
-    if (sameTime >= stayOn) {
-      lightLevel = 0;
-    }
+    sameTime = millis();
+  } else if (sameTime > stayOn + millis()) {
+    lightLevel = 0;
   }
   lastDistance = inches;
 
